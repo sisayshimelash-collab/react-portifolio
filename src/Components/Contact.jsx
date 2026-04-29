@@ -112,7 +112,7 @@ export default function Contact() {
                 GitHub
               </p>
               <span className="text-white hover:text-blue-500 transition">
-                sisufresher
+                Sisay Shimelash
               </span>
             </div>
           </motion.a>

@@ -1,4 +1,4 @@
-import { ExternalLink, Code2, Loader } from "lucide-react";
+import { ExternalLink, Code2, Loader, CheckCircle } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 
 const projects = [
@@ -12,17 +12,20 @@ const projects = [
     github: "#",
     demo: "#",
     status: "In Progress",
+    type: "ongoing",
   },
+
   {
-    title: "MERN Admin Dashboard",
+    title: "Personal Portfolio Website",
     description:
-      "Full-stack dashboard with authentication, user management, and REST API integration.",
-    tech: ["MongoDB", "Express", "React", "Node.js"],
+      "A fully responsive developer portfolio showcasing projects, skills, and contact system. Built with modern UI/UX design principles.",
+    tech: ["React", "Tailwind", "Framer Motion"],
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000",
+      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=1000",
     github: "#",
     demo: "#",
-    status: "Building",
+    status: "Completed",
+    type: "completed",
   },
 ];
 
@@ -30,18 +33,17 @@ export default function Projects() {
   return (
     <section id="projects" className="bg-black text-white py-20 px-6">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
+        {/* HEADER */}
         <div className="mb-12">
           <h2 className="text-3xl md:text-4xl font-bold">
-            Ongoing <span className="text-blue-500">Projects</span>
+            My <span className="text-blue-500">Projects</span>
           </h2>
           <p className="text-gray-400 mt-3 max-w-xl">
-            Projects currently under development real progress, not just
-            ideas.
+            A mix of ongoing development and completed real-world applications.
           </p>
         </div>
 
-        {/* Grid */}
+        {/* GRID */}
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project) => (
             <div
@@ -55,11 +57,17 @@ export default function Projects() {
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
                 />
+
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
 
                 {/* STATUS BADGE */}
                 <div className="absolute top-3 left-3 flex items-center gap-2 px-3 py-1 bg-black/60 border border-white/10 rounded-full text-xs text-white">
-                  <Loader size={14} className="text-blue-400 animate-spin" />
+                  {project.type === "ongoing" ? (
+                    <Loader size={14} className="text-blue-400 animate-spin" />
+                  ) : (
+                    <CheckCircle size={14} className="text-green-400" />
+                  )}
+
                   {project.status}
                 </div>
               </div>
@@ -68,8 +76,14 @@ export default function Projects() {
               <div className="p-6">
                 {/* TOP ROW */}
                 <div className="flex justify-between items-center mb-3">
-                  <span className="text-xs px-3 py-1 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-full">
-                    Ongoing
+                  <span
+                    className={`text-xs px-3 py-1 border rounded-full ${
+                      project.type === "ongoing"
+                        ? "bg-blue-500/10 text-blue-400 border-blue-500/20"
+                        : "bg-green-500/10 text-green-400 border-green-500/20"
+                    }`}
+                  >
+                    {project.type === "ongoing" ? "Ongoing" : "Completed"}
                   </span>
 
                   <div className="flex gap-3 text-gray-400">
@@ -79,6 +93,7 @@ export default function Projects() {
                         className="hover:text-white transition"
                       />
                     </a>
+
                     <a href={project.demo}>
                       <ExternalLink
                         size={18}
@@ -115,7 +130,7 @@ export default function Projects() {
           ))}
         </div>
 
-        {/* FOOTER LINK */}
+        {/* FOOTER */}
         <div className="text-center mt-16">
           <a
             href="https://github.com"
@@ -123,7 +138,7 @@ export default function Projects() {
             rel="noreferrer"
             className="text-gray-400 hover:text-white border-b border-white/10 pb-1"
           >
-            View more progress on GitHub →
+            View all projects on GitHub →
           </a>
         </div>
       </div>
