@@ -35,7 +35,7 @@ export default function Navbar() {
           {/* Social Icons (FIXED) */}
           <div className="flex items-center gap-4 border-l border-white/10 pl-6">
             <a
-              href="https://github.com/your-username"
+              href="https://github.com/sisayshimelash-collab"
               target="_blank"
               rel="noreferrer"
               className="text-gray-400 hover:text-white transition"
@@ -44,7 +44,7 @@ export default function Navbar() {
             </a>
 
             <a
-              href="https://linkedin.com/in/your-profile"
+              href="https://www.linkedin.com/in/sisay-shimelash-2b6732379?utm_source=share_via&utm_content=profile&utm_medium=member_android"
               target="_blank"
               rel="noreferrer"
               className="text-gray-400 hover:text-white transition"
@@ -85,11 +85,11 @@ export default function Navbar() {
           ))}
 
           <div className="flex gap-6 pt-4 border-t border-white/10">
-            <a href="#">
+            <a href="https://github.com/sisayshimelash-collab">
               <FaGithub size={24} />
             </a>
 
-            <a href="#">
+            <a href="https://www.linkedin.com/in/sisay-shimelash-2b6732379?utm_source=share_via&utm_content=profile&utm_medium=member_android">
               <FaLinkedin size={24} />
             </a>
 
