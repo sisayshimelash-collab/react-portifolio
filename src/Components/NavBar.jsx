@@ -53,7 +53,7 @@ export default function Navbar() {
             </a>
 
             <a
-              href="mailto:your@email.com"
+              href="mailto:sisayshimelash@email.com"
               className="text-gray-400 hover:text-white transition"
             >
               <Mail size={20} />
@@ -93,7 +93,7 @@ export default function Navbar() {
               <FaLinkedin size={24} />
             </a>
 
-            <a href="mailto:your@email.com">
+            <a href="mailto:sisayshimelash@email.com">
               <Mail size={24} />
             </a>
           </div>
