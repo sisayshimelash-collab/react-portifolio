@@ -1,6 +1,6 @@
 import { ExternalLink, Code2, Loader, CheckCircle } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
-
+import image from "../assets/image.png";
 const projects = [
   {
     title: "FreshMinds Academy",
@@ -21,7 +21,7 @@ const projects = [
       "A fully responsive developer portfolio showcasing projects, skills, and contact system. Built with modern UI/UX design principles.",
     tech: ["React", "Tailwind", "Framer Motion"],
     image:
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=1000",
+      {image},
     github: "#",
     demo: "#",
     status: "Completed",
