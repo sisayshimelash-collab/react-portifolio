@@ -1,0 +1,194 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: #000000;
+  color: #ffffff;
+}
+
+.bgGlowRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(59, 130, 246, 0.1);
+  filter: blur(96px);
+  z-index: -1;
+}
+
+.bgGlowLeft {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 33.333%;
+  height: 100%;
+  background: rgba(168, 85, 247, 0.1);
+  filter: blur(96px);
+  z-index: -1;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+}
+
+.textContent {
+  /* Animation handled by framer-motion */
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: rgba(59, 130, 246, 0.1);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 9999px;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.titleHighlight {
+  color: #3b82f6;
+}
+
+.description {
+  color: #9ca3af;
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  max-width: 36rem;
+  line-height: 1.75;
+}
+
+.descriptionHighlight {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.primaryButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #3b82f6;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.2);
+  transition: background 0.3s;
+}
+
+.primaryButton:hover {
+  background: #2563eb;
+}
+
+.secondaryButton {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.secondaryButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.imageSection {
+  display: flex;
+  justify-content: center;
+}
+
+.imageWrapper {
+  position: relative;
+}
+
+.imageGlow {
+  position: absolute;
+  inset: -1rem;
+  background: rgba(59, 130, 246, 0.2);
+  border-radius: 9999px;
+  filter: blur(32px);
+  transition: all 0.5s;
+}
+
+.imageWrapper:hover .imageGlow {
+  background: rgba(59, 130, 246, 0.3);
+}
+
+.imageContainer {
+  width: 16rem;
+  height: 16rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.floatingBadge {
+  position: absolute;
+  bottom: -1rem;
+  right: -1rem;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(12px);
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.floatingBadge span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 3.75rem;
+  }
+
+  .container {
+    padding: 7rem 1.5rem;
+  }
+
+  .imageContainer {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
