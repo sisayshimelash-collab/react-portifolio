@@ -27,8 +27,8 @@ const projects = [
     ],
     image:
       "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1000",
-    github: "#",
-    demo: "#",
+    github: "https://github.com/sisayshimelash-collab/ai-powered-evangadi-forum",
+    demo: "https://ai-powered-evangadi-forum-psi.vercel.app/",
     status: "Completed",
     type: "completed",
   },
@@ -66,7 +66,7 @@ const projects = [
     image:
       "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?auto=format&fit=crop&q=80&w=1000",
     github: "#",
-    demo: "#",
+    demo: "https://moviedbpro-4f2f37.netlify.app/",
     status: "Completed",
     type: "completed",
   },

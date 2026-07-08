@@ -5,11 +5,11 @@ import {
   FaCss3Alt,
   FaNodeJs,
   FaGitAlt,
+  FaGithub,
 } from "react-icons/fa";
 
 import {
   SiJavascript,
-  SiTailwindcss,
   SiExpress,
   SiMysql,
   SiApachespark,
@@ -44,7 +44,6 @@ const skillCategories = [
       { name: "CSS3", icon: FaCss3Alt, color: "text-blue-500" },
       { name: "JavaScript", icon: SiJavascript, color: "text-yellow-400" },
       { name: "React", icon: FaReact, color: "text-cyan-400" },
-      { name: "Tailwind", icon: SiTailwindcss, color: "text-sky-400" },
       { name: "Vite", icon: SiVite, color: "text-purple-500" },
       { name: "Axios", icon: SiAxios, color: "text-blue-400" },
       { name: "React Router", icon: Route, color: "text-red-400" },
@@ -91,7 +90,10 @@ const skillCategories = [
   },
   {
     category: "Tools",
-    skills: [{ name: "Git", icon: FaGitAlt, color: "text-red-500" }],
+    skills: [
+      { name: "Git", icon: FaGitAlt, color: "text-red-500" },
+      { name: "GitHub", icon: FaGithub, color: "text-gray-300" },
+    ],
   },
 ];
 

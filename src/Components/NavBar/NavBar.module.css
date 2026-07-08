@@ -3,17 +3,34 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 50;
+  z-index: 1000;
   background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px) saturate(180%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.navbar::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.5), rgba(139, 92, 246, 0.5), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.navbar:hover::after {
+  opacity: 1;
 }
 
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 1.5rem;
-  height: 4rem;
+  padding: 0 2rem;
+  height: 4.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,87 +38,164 @@
 
 .logo {
   font-size: 1.25rem;
-  font-weight: 700;
-  color: #3b82f6;
-  font-family: monospace;
+  font-weight: 800;
+  font-family: 'Space Grotesk', sans-serif;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   text-decoration: none;
+  letter-spacing: -0.02em;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.logo:hover {
+  transform: scale(1.05);
 }
 
 .desktopMenu {
   display: none;
   align-items: center;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .navLink {
-  font-size: 0.875rem;
-  color: #d1d5db;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #9ca3af;
   text-decoration: none;
   transition: color 0.3s;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  transition: width 0.3s;
 }
 
 .navLink:hover {
   color: #ffffff;
 }
 
+.navLink:hover::after {
+  width: 100%;
+}
+
 .socialIcons {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.75rem;
   border-left: 1px solid rgba(255, 255, 255, 0.1);
-  padding-left: 1.5rem;
+  padding-left: 2rem;
+  margin-left: 1rem;
 }
 
 .socialLink {
-  color: #9ca3af;
+  color: #6b7280;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: all 0.3s;
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .socialLink:hover {
-  color: #ffffff;
+  color: #3b82f6;
+  background: rgba(59, 130, 246, 0.1);
+  transform: translateY(-2px);
 }
 
 .mobileButton {
-  display: block;
-  background: none;
-  border: none;
-  color: #d1d5db;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #9ca3af;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0.625rem;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.mobileButton:hover {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.3);
+  color: #ffffff;
 }
 
 .mobileMenu {
-  display: block;
-  background: #000000;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(16px);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 1.5rem;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .mobileMenu a {
   display: block;
-  font-size: 1.125rem;
-  color: #d1d5db;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #9ca3af;
   text-decoration: none;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s;
+  background: rgba(255, 255, 255, 0.02);
 }
 
 .mobileMenu a:hover {
   color: #ffffff;
+  background: rgba(59, 130, 246, 0.1);
+  transform: translateX(5px);
 }
 
 .mobileSocials {
   display: flex;
-  gap: 1.5rem;
+  gap: 0.75rem;
   padding-top: 1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .mobileSocials a {
   margin-bottom: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.mobileSocials a:hover {
+  background: rgba(59, 130, 246, 0.15);
+  transform: translateY(-3px) translateX(0);
 }
 
 @media (min-width: 768px) {

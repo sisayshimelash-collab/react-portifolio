@@ -26,31 +26,24 @@ export default function About() {
             </h2>
 
             <p className={styles.cardText}>
-              I'm a Software Engineering student passionate about merging traditional full-stack development with cutting-edge AI technologies. 
-              My journey evolved from building basic web apps to creating intelligent systems powered by AI, RAG architectures, and semantic search.
+              I'm an AI-Powered Full-Stack Developer specializing in building intelligent web applications 
+              that combine the power of modern frameworks with cutting-edge AI technologies. 
+              My expertise spans from crafting seamless user experiences to architecting robust backend systems 
+              with AI integration.
             </p>
 
             <p className={styles.cardText}>
-              I specialize in integrating{" "}
+              I create{" "}
               <span className={styles.cardTextHighlight}>
-                AI capabilities
+                production-ready applications
               </span>{" "}
-              into full-stack applications, making them smarter and more context-aware. Whether it's PDF intelligence, 
-              vector embeddings, or AI-driven Q&A systems, I build applications that solve real problems.
+              with features like RAG systems, semantic search, vector embeddings, and AI-driven Q&A platforms. 
+              Currently pursuing Software Engineering to deepen my technical foundation while actively 
+              building real-world solutions.
             </p>
 
             {/* INFO BLOCKS */}
             <div className={styles.infoBlocks}>
-              <motion.div whileHover={{ scale: 1.03 }} className={styles.infoBlock}>
-                <div className={styles.infoIcon}>
-                  <GraduationCap size={20} />
-                </div>
-                <div className={styles.infoText}>
-                  <h4>Software Engineering Student</h4>
-                  <p>Current Focus</p>
-                </div>
-              </motion.div>
-
               <motion.div whileHover={{ scale: 1.03 }} className={styles.infoBlock}>
                 <div className={styles.infoIcon}>
                   <Code size={20} />
@@ -58,6 +51,16 @@ export default function About() {
                 <div className={styles.infoText}>
                   <h4>AI-Powered Full-Stack Developer</h4>
                   <p>Skillset</p>
+                </div>
+              </motion.div>
+
+              <motion.div whileHover={{ scale: 1.03 }} className={styles.infoBlock}>
+                <div className={styles.infoIcon}>
+                  <GraduationCap size={20} />
+                </div>
+                <div className={styles.infoText}>
+                  <h4>Software Engineering Student</h4>
+                  <p>Education</p>
                 </div>
               </motion.div>
             </div>
