@@ -1,6 +1,9 @@
 import { ExternalLink, Code2, Loader, CheckCircle } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import image1 from "../../assets/image.png";
+import evangadiForumImage from "../../assets/evangadi-forum.png";
+import chatgptImage from "../../assets/chatgpt.png";
+import netflixImage from "../../assets/netflix.png";
 import styles from "./Projects.module.css";
 
 const projects = [
@@ -25,8 +28,7 @@ const projects = [
       "PDF parsing and intelligent chunking",
       "Service-layer architecture with 15+ API endpoints",
     ],
-    image:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1000",
+    image: evangadiForumImage,
     github: "https://github.com/sisayshimelash-collab/ai-powered-evangadi-forum",
     demo: "https://ai-powered-evangadi-forum-psi.vercel.app/",
     status: "Completed",
@@ -44,10 +46,9 @@ const projects = [
       "Conversation persistence",
       "Responsive ChatGPT-style interface",
     ],
-    image:
-      "https://images.unsplash.com/photo-1676277791608-ac0ab0abf4e4?auto=format&fit=crop&q=80&w=1000",
-    github: "#",
-    demo: "#",
+    image: chatgptImage,
+    github: "https://github.com/sisayshimelash-collab/chatgpt-clone-project",
+    demo: "https://gpt-clone-silk.vercel.app/",
     status: "Completed",
     type: "completed",
   },
@@ -63,10 +64,9 @@ const projects = [
       "Search functionality",
       "Responsive Netflix-style UI",
     ],
-    image:
-      "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?auto=format&fit=crop&q=80&w=1000",
-    github: "#",
-    demo: "https://moviedbpro-4f2f37.netlify.app/",
+    image: netflixImage,
+    github: "https://github.com/sisayshimelash-collab/MovieDB",
+    demo: "https://movie-db-zeta-gilt.vercel.app/",
     status: "Completed",
     type: "completed",
   },
